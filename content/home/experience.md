@@ -2,11 +2,11 @@
 # Experience widget.
 widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = true  # Activate this widget? true/false
+active = false  # Activate this widget? true/false
 weight = 40  # Order that this section will appear.
 
 title = "Experience"
-subtitle = ""
+subtitle = "PREVIOUS ASSOCIATIONS THAT HELPED TO GATHER EXPERIENCE"
 
 # Date format for experience
 #   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
@@ -41,4 +41,13 @@ date_format = "Jan 2006"
   date_end = "2016-12-31"
   description = """Taught electronic engineering and researched semiconductor physics."""
 
+[[experience]]
+  title = "Professor"
+  company = "University Y"
+  company_url = ""
+  location = "California"
+  date_start = "2017-01-01"
+  date_end = "2016-12-30"
+  description = """Taught electronic engineering and researched semiconductor physics."""
+  
 +++
