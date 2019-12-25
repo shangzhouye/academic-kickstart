@@ -10,6 +10,8 @@ This is the repository of my portfolio website build with [themefisher](https://
 
 The automated procedure for deployment is shown in the figure below:
 
+![deployment](https://github.com/shangzhouye/portfolio-website/blob/master/static/img/deployment.png?raw=true "deployment")
+
 ## How to use it
 
 - This site is build with the static site generator [hugo](https://gohugo.io/). 
