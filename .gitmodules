@@ -3,4 +3,4 @@
 	url = https://github.com/gcushen/hugo-academic.git
 [submodule "themes/academia-hugo"]
 	path = themes/academia-hugo
-	url = git@github.com:shangzhouye/Academia-hugo.git
+	url = https://github.com/shangzhouye/Academia-hugo.git
