@@ -4,21 +4,21 @@
 
 ## Overview
 
-This is the repository of my portfolio website build with [themefisher](https://themefisher.com/), [Acadedemic theme](https://sourcethemes.com/academic/docs/) and [hugo](https://gohugo.io/). This repo is forked from the [academic-kickstart](https://github.com/sourcethemes/academic-kickstart) repo.
+This is the repository of my portfolio website built with [themefisher](https://themefisher.com/), [Acadedemic theme](https://sourcethemes.com/academic/docs/) and [Hugo](https://gohugo.io/).
 
 ## Deployment
 
-The automated procedure for deployment is shown in the figure below:
+The automated procedure for deployment using `Github`, `Travis CI` and `Netlify` is shown in the figure below (HTTPS enabled):
 
 ![deployment](https://github.com/shangzhouye/portfolio-website/blob/master/static/img/deployment.png?raw=true "deployment")
 
 ## How to use it
 
-- This site is build with the static site generator [hugo](https://gohugo.io/). 
+- This site is build with the static site generator [Hugo](https://gohugo.io/). 
 
-- To install `hugo`, please refer to the original [documentation](https://gohugo.io/getting-started/installing/). The version used is `v0.61.0/extended`.
+- To install `Hugo`, please refer to the original [documentation](https://gohugo.io/getting-started/installing/). `Hugo v0.61.0/extended` was used for building this website.
 
-- This theme is adapted from the [Academia-hugo](https://github.com/themefisher/Academia-hugo) theme. The forked package is [here](https://github.com/shangzhouye/Academia-hugo). 
+- This theme is adapted from the [Academia-hugo](https://github.com/themefisher/Academia-hugo) theme. The adapted package is [here](https://github.com/shangzhouye/Academia-hugo). 
 
 - To use this adapted theme, navigate to the themes folder and use the following commands:
 
