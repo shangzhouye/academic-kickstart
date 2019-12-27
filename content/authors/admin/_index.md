@@ -18,7 +18,7 @@ role: M.S. Robotics Student
 
 # Organizations/Affiliations
 organizations:
-- name: Northwestern University
+- name:  Northwestern University
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -72,5 +72,3 @@ email: ""
 user_groups:
 
 ---
-
-Placeholder
