@@ -28,10 +28,6 @@ subtitle = ""
   [[content.filter_button]]
     name = "ROS"
     tag = "ros"
-
-  [[content.filter_button]]
-    name = "Deep Learning"
-    tag = "deep_learning"
   
   [[content.filter_button]]
     name = "Python"
