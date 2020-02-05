@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 1  # Order that this section will appear.
 
 title = "Projects"
-subtitle = ""
+subtitle = "ROS, Python, C/C++, Linux"
 
 [content]
   # Page type to display. E.g. project.
@@ -25,13 +25,6 @@ subtitle = ""
     name = "All"
     tag = "*"
   
-  [[content.filter_button]]
-    name = "ROS"
-    tag = "ros"
-  
-  [[content.filter_button]]
-    name = "Python"
-    tag = "python"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.

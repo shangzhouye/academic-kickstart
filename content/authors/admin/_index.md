@@ -39,7 +39,7 @@ education:
     year: 2018
   - course: Bachelor of Engineering in Traffic Equipment and Control Engineering
     institution: Central South University, China
-    year: 2018
+    year: 2019
 
 # Social/academia Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
