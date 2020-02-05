@@ -6,7 +6,7 @@ tags:
 date: "2019-12-11T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-external_link: https://github.com/shangzhouye/mobile-manipulation-capstone-public
+external_link: https://github.com/shangzhouye/mobile-manipulation-capstone-public/#readme
 
 image:
   caption: Pick and Place

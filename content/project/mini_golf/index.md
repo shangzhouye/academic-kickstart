@@ -6,7 +6,7 @@ tags:
 date: "2019-12-13T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-external_link: https://github.com/shangzhouye/final-project-numg
+external_link: https://github.com/shangzhouye/final-project-numg/#readme
 
 image:
   caption: Sawyer robot playing mini-golf

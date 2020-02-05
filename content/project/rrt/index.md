@@ -6,7 +6,7 @@ tags:
 date: "2019-09-21T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-external_link: https://github.com/shangzhouye/rrt-practice
+external_link: https://github.com/shangzhouye/rrt-practice/#readme
 
 image:
   caption: RRT
