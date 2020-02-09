@@ -37,5 +37,5 @@
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
  [[main]]
     name = "Resume"
-    url = "https://www.mccormick.northwestern.edu/robotics/people/student-profiles/profiles-2019-2020/ye-shangzhou.html"
+    url = "https://www.mccormick.northwestern.edu/robotics/documents/resumes/2019/ye-shangzhou.pdf"
     weight = 70

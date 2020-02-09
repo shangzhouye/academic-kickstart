@@ -7,7 +7,7 @@ authors:
 - admin
 # resume download button
 btn:
-- url : "https://www.mccormick.northwestern.edu/robotics/people/student-profiles/profiles-2019-2020/ye-shangzhou.html"
+- url : "https://www.mccormick.northwestern.edu/robotics/documents/resumes/2019/ye-shangzhou.pdf"
   label : "Download Resume"
 
 # Is this the primary user of the site?
@@ -48,7 +48,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:shangzhouye@gmail.com'  # For a direct email link, use "mailto:test@example.org".
+  link: 'mailto:shangzhouye2020@u.northwestern.edu'  # For a direct email link, use "mailto:test@example.org".
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/shangzhouye/
