@@ -90,7 +90,7 @@ The disparity map from the SGBM algorithm:
 
 ORB (Oriented FAST and Rotated BRIEF) features are used in the implementation. Feature detection is completed in each frame separately, and then feature matching is implemented between adjacent frames. This avoids feature drift in long time operation [3].
 
-The Unform distribution of features is essential to the accuracy of tracking. It can enable describing the scene with fewer features, be more robust in dynamic scenes, and reduce the drift rates. Adaptive non-maximal suppression (ANMS) algorithm was implemented to get a more uniform distribution. It only uses those features that are a maximum in a neighborhood of radius r according to its corner strength. A robust coefficient was also added to require the neighbor feature has a sufficiently larger strength. 
+The Unform distribution of features is essential to the accuracy of tracking. It can enable describing the scene with fewer features, be more robust in dynamic scenes, and reduce the drift rates. Adaptive non-maximal suppression (ANMS) algorithm was implemented to get a more uniform distribution. It only uses those features that are a maximum in a neighborhood of radius $r$ according to its corner strength. A robust coefficient was also added to require the neighbor feature has a sufficiently larger strength. 
 
 In the implementation, the suppression radius (the smallest distance to another point that is significantly stronger) for each feature is calculated. Strongest feature has a radius of infinity. The suppression radius is then ranked with 500 key points selected for each frame.
 
@@ -136,7 +136,7 @@ The result shows the pose-only optimization increases the accuracy while structu
 
 The motion estimation pipeline is a state machine with three states. When ten consecutive frames are rejected, the state will be set to lost. A frame will be rejected if the estimated motion is too large, or the number of inliers is not enough.
 
-Figure
+![state_machine](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/state_machine.png?raw=true "state_machine")
 
 ### Map Management
 
@@ -157,13 +157,13 @@ Green markers show keyframes that are currently active and undergoing optimizati
 
 ![active_landmarks](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/active_landmarks.png?raw=true "active_landmarks")
 
-This is the data structure used in my implementation. A map owns multiple keyframes and landmarks. A keyframe owns multiple features. A feature knows the ID of its frame, and the connection between features and landmarks are also established. Keyframes and landmarks are stored in a hashtable (`unordered_map` in `C++`) to ensure `O(1)` time complexity. Gray arrows in the figure denoted the ownership.
+This is the data structure used in my implementation. A map owns multiple keyframes and landmarks. A keyframe owns multiple features. A feature knows the ID of its frame, and the connection between features and landmarks are also established. Keyframes and landmarks are stored in a hashtable (`unordered_map` in `C++`) to ensure O(1) time complexity. Gray arrows in the figure denotes the ownership.
 
 ![Data structure](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/Data%20structure.png?raw=true "Data structure")
 
 ### Bundle Adjustment
 
-Bundle adjustment is performed on active keyframes and landmarks. G2O framework is used in the implementation. Pose only optimization only modifies the camera poses to reduce the reprojection error, while structure optimization modifies both the poses and landmarks positions. Levenberg–Marquardt method is used for optimization. The cost function is:
+Bundle adjustment is performed on active keyframes and landmarks. G2O framework is used in the implementation. Pose-only optimization only modifies the camera poses to reduce the reprojection error, while structure optimization modifies both the poses and landmarks positions. Levenberg–Marquardt method is used for optimization. The cost function is:
 
 $\frac{1}{2}\sum_{i=1}^{m}\sum_{j=1}^{n}\left \|| z_{ij} - h(T_{i},P_{j}) \right \||$
 
@@ -184,24 +184,14 @@ The table below shows the performance of my implementation on KITTI Dataset sequ
 | Without Optimization | 4.40                    | 1.38                     |
 | With Optimization    | 4.17                    | 1.37                     |
 
-The figure below shows the trajectory estimated by my implementation compared to the ground truth.
+The figure below shows the trajectory estimated by my implementation compared to the ground truth. The system has been tested on KITTI sequence 00 and 01 without lost.
 
 ![sequence_00](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/sequence_00-1.jpg?raw=true "sequence_00")
-
-The system has been tested on KITTI sequence 00 and 01 without lost. It is less accurate compared to state-of-art stereo visual SLAM systems, but it shows an acceptable result for the purpose of learning different components, algorithms in a visual SLAM system.
-
-The table below shows the accuracy of state-of-art stereo visual SLAM systems on KITTI.
-
-| State-of-art Stereo Visual SLAM | Translational Error (%) | Rotational Error (deg/m) |
-|---------------------------------|-------------------------|--------------------------|
-| ORB-SLAM2                       | 1.15%                   | 0.0027                   |
-| S-PTAM                          | 1.19%                   | 0.0025                   |
-| S-LSD-SLAM                      | 1.20%                   | 0.0033                   |
 
 ## Future Work
 
 - A loop closure module can be added to ensure the global consistency of the map
-- An occupancy grid map can be built by detecting drivable areas. This can be completed by techniques, including plane detection, lane line detection, semantic segmentation, etc.
+- An occupancy grid map can be built by detecting drivable areas. This can be completed by techniques including plane detection, lane line detection, semantic segmentation, etc.
 
 ## References
 
