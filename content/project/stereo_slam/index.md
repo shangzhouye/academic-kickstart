@@ -32,9 +32,16 @@ This [video](https://www.youtube.com/watch?v=QccAICorVHE&t=14s) shows the stereo
 
 ORB Features Detected:
 
+![orb_feature](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/orb_feature.gif?raw=true "orb_feature")
+
+
 Disparity Map:
 
+![disparity](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/disparity.gif?raw=true "disparity")
+
 Tracking and Optimization:
+
+![mapping](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/mapping.gif?raw=true "mapping")
 
 - The white point cloud shows the landmarks that are active in the map.
 - Green markers show the keyframes that are undergoing optimization.
@@ -42,7 +49,11 @@ Tracking and Optimization:
 
 Feature Map built:
 
+![feature_map](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/feature_map.gif?raw=true "feature_map")
+
 Compared to Groundtruth:
+
+![traj](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/traj.gif?raw=true "traj")
 
 ## Overview
 
@@ -55,7 +66,12 @@ The system has six major components:
 - Motion Estimation
 - Map Management
 - Bundle Adjustment
-- Visualization ModuleThe figure below shows the flowchart of the system. Each component will be presented in detail in the Algorithms section.
+- Visualization Module
+
+The figure below shows the flowchart of the system. Each component will be presented in detail in the Algorithms section.
+
+![Stereo SLAM](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/Stereo%20SLAM.png?raw=true "Stereo SLAM")
+
 ## Algorithms
 
 ### Initialization
@@ -64,7 +80,11 @@ In the initialization stage, depth information of detected ORB keypoints is retr
 
 The disparity map from the SGBM algorithm:
 
+![disparity_map](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/disparity_map.png?raw=true "disparity_map")
+
 3-D Reconstruction of one frame:
+
+![stereo](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/stereo.gif?raw=true "stereo")
 
 ### Feature Detection/Matching
 
@@ -76,7 +96,11 @@ In the implementation, the suppression radius (the smallest distance to another 
 
 500 key points before the ANMS algorithm:
 
+![ANMSbefore](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/ANMSbefore.png?raw=true "ANMSbefore")
+
 500 key points after ANMS algorithms:
+
+![ANMSafter](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/ANMSafter.png?raw=true "ANMSafter")
 
 The tracking accuracy also increased after implementing this algorithm:
 
@@ -89,7 +113,11 @@ When doing feature matching between adjacent frames, cross-check is performed to
 
 All matches:
 
+![all_matches](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/all_matches.jpg?raw=true "all_matches")
+
 After cross-check and threshold selection:
+
+![matches_after_threshold](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/matches_after_threshold.jpg?raw=true "matches_after_threshold")
 
 Matched features are then attached to the current frame and connected to matched landmarks (3-D points in world coordinate) in the map. No 3-D points triangulation is performed for non-keyframes.
 
@@ -97,14 +125,19 @@ Matched features are then attached to the current frame and connected to matched
 
 In my implementation, motion estimation is done by 3-D-2-D Perspective-n-Point (PnP) method and the random sample consensus (RANSAC) outlier rejection algorithm. I also tested the non-linear optimization method that minimizes the reprojection error using the result from PnP as an initial guess.
 
-$T^{*} = arg\min_{T}\frac{1}{2}\sum_{i=1}^{n}\left \| u_{i} - \frac{1}{s_{i}}KTP_{i} \right \|$
+$T^{*} = arg\min_{T}\frac{1}{2}\sum_{i=1}^{n}\left \|| u_{i} - \frac{1}{s_{i}}KTP_{i} \right \||$
 
 The result shows the pose-only optimization increases the accuracy while structure optimization (optimize both pose and landmarks) does not increase the accuracy. The optimization is implemented using the G2O framework [4]. In the final version, the single frame optimization was removed for better efficiency as it does not have a significant effect on the overall performance.
 
 | Seq 00 on KITTI               | Translational Error (%) | Rotational Error (deg/m) |
 |-------------------------------|-------------------------|--------------------------|
 | Pose Only Optimization        | 4.35                    | 1.01                     |
-| Pose + Landmarks Optimization | 4.64                    | 1.12                     |The motion estimation pipeline is a state machine with three states. When ten consecutive frames are rejected, the state will be set to lost. A frame will be rejected if the estimated motion is too large, or the number of inliers is not enough.Figure
+| Pose + Landmarks Optimization | 4.64                    | 1.12                     |
+
+The motion estimation pipeline is a state machine with three states. When ten consecutive frames are rejected, the state will be set to lost. A frame will be rejected if the estimated motion is too large, or the number of inliers is not enough.
+
+Figure
+
 ### Map Management
 
 A frame is selected as a keyframe when the following requirements are met:
@@ -122,22 +155,24 @@ The number of active keyframes is kept to be ten in the map to reduce the comput
 
 Green markers show keyframes that are currently active and undergoing optimization:
 
-Figure
+![active_landmarks](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/active_landmarks.png?raw=true "active_landmarks")
 
 This is the data structure used in my implementation. A map owns multiple keyframes and landmarks. A keyframe owns multiple features. A feature knows the ID of its frame, and the connection between features and landmarks are also established. Keyframes and landmarks are stored in a hashtable (`unordered_map` in `C++`) to ensure `O(1)` time complexity. Gray arrows in the figure denoted the ownership.
 
-Data structure figure
+![Data structure](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/Data%20structure.png?raw=true "Data structure")
+
 ### Bundle Adjustment
 
 Bundle adjustment is performed on active keyframes and landmarks. G2O framework is used in the implementation. Pose only optimization only modifies the camera poses to reduce the reprojection error, while structure optimization modifies both the poses and landmarks positions. Levenberg–Marquardt method is used for optimization. The cost function is:
 
-$\frac{1}{2}\sum_{i=1}^{m}\sum_{j=1}^{n}\left \| z_{ij} - h(T_{i},P_{j}) \right \|$
+$\frac{1}{2}\sum_{i=1}^{m}\sum_{j=1}^{n}\left \|| z_{ij} - h(T_{i},P_{j}) \right \||$
 
 The computational cost is reduced by utilizing the sparsity of the H matrix. The map management module in my implementation forms a sliding window, which maintains its sparsity.
 
 In the final version, ten iterations are performed to reject outliers. Ten iterations of structure optimization are then completed to optimize both landmarks and poses. Another ten iterations of pose only optimization is also performed.
 
 A landmark is considered as an outlier if its cost is larger than a threshold. The threshold will be increased if half of the landmarks are regarded as outliers in the first few iterations. Although only landmarks with reliable depth information are added for optimization, the threshold for 'reliable depth' is mostly an empirical result. It turns out that the performance of optimization is sensitive to the threshold. A smaller threshold shows a significantly better performance. This indicates that triangulated landmarks that are far away from the camera are not accurate. It makes sense as the stereo system can degenerate into a monocular one if the object is far away from the camera. Therefore, to maintain the robustness of the system, optimized landmark positions are updated into the map.
+
 Although the tracking thread and the optimization thread can be run in parallel according to state-of-art keyframe-based SLAM systems [5], they are completed in sequence for simplicity in the implementation. 
 
 ## Results
@@ -151,7 +186,7 @@ The table below shows the performance of my implementation on KITTI Dataset sequ
 
 The figure below shows the trajectory estimated by my implementation compared to the ground truth.
 
-Figure
+![sequence_00](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/sequence_00-1.jpg?raw=true "sequence_00")
 
 The system has been tested on KITTI sequence 00 and 01 without lost. It is less accurate compared to state-of-art stereo visual SLAM systems, but it shows an acceptable result for the purpose of learning different components, algorithms in a visual SLAM system.
 
