@@ -1,5 +1,5 @@
 ---
-title: Stereo Visual SLAM (Jan. - Mar. 2020)
+title: Stereo Visual SLAM
 summary: Built a stereo visual SLAM system with feature-based tracking and keyframe-based optimization.
 skills: Skills - C++, Motion Estimation, Bundle Adjustment
 tags:
@@ -13,6 +13,10 @@ image:
   focal_point: Smart
 
 links:
+- icon: github
+  icon_pack: fab
+  name: Github Repository
+  url: https://github.com/shangzhouye/stereo-visual-slam
 url_code: ""
 url_pdf: ""
 url_slides: ""
@@ -28,7 +32,7 @@ url_video: ""
 
 ## Demo
 
-This [video](https://www.youtube.com/watch?v=QccAICorVHE&t=14s) shows the stereo visual SLAM system tested on the KITTI dataset sequence 00.
+This project is a stereo visual SLAM system with featured-based visual odometry and keyframe-based optimization. This [video](https://www.youtube.com/watch?v=QccAICorVHE&t=14s) shows the stereo visual SLAM system tested on the KITTI dataset sequence 00.
 
 ORB Features Detected:
 
@@ -71,6 +75,8 @@ The system has six major components:
 The figure below shows the flowchart of the system. Each component will be presented in detail in the Algorithms section.
 
 ![Stereo SLAM](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/Stereo%20SLAM.png?raw=true "Stereo SLAM")
+
+This is my winter individual project at the MSR program at Northwestern Univerisity, Evanston (Jan. - Mar. 2020). 
 
 ## Algorithms
 

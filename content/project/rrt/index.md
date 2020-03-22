@@ -1,5 +1,5 @@
 ---
-title: RRT Algorithm (Sep. 2019)
+title: RRT Algorithm
 summary: Implementation of Rapidly-Exploring Random Tree (RRT)
 skills: Skills - Python, Sampling-Based Motion planner
 tags:

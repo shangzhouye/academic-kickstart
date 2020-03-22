@@ -1,5 +1,5 @@
 ---
-title: A* Search and Navigation (Oct. 2019)
+title: A* Search and Navigation
 summary: A* search algorithm and inverse kinematic path tracking controller
 skills: Skills - Grid-based search, Differential Drive Robot
 tags:

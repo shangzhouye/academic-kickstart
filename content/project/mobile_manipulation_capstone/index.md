@@ -1,5 +1,5 @@
 ---
-title: Mobile Manipulation (Dec. 2019)
+title: Mobile Manipulation
 summary: Pick and place a block using the youBot mobile manipulator.
 skills: Skills - Trajectory Generation, PI Controller
 tags:

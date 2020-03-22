@@ -1,5 +1,5 @@
 ---
-title: One-legged 2-D Hopping Robot Simulation (Dec. 2019)
+title: One-legged 2-D Hopping Robot Simulation
 summary: Model a 2D one-legged hopping robot on a flat ground.
 skills: Skills - Lagrangian Mechanics, Numerical Method
 tags:
