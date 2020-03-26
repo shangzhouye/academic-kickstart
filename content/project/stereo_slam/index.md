@@ -171,6 +171,8 @@ This is the data structure used in my implementation. A map owns multiple keyfra
 
 Bundle adjustment is performed on active keyframes and landmarks. The figure below illustrates the keyframe-based bundle adjustment ($T_i$ denotes camera poses, and $X_j$ denotes landmarks). Compared to filter-based methods, where previous poses are removed from the map and summarized into a probability distribution at the current time, keyframe-based methods control the computational scale by selecting a subset of all the frames as keyframes [5].
 
+![keyframe_based](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/keyframe_based.png?raw=true "keyframe_based")
+
 G2O framework is used in the implementation. Pose-only optimization only modifies the camera poses to reduce the reprojection error, while structure optimization modifies both the poses and landmarks positions. Levenberg–Marquardt method is used for optimization. The cost function is:
 
 $\frac{1}{2}\sum_{i=1}^{m}\sum_{j=1}^{n}\left \|| z_{ij} - h(T_{i},P_{j}) \right \||$
