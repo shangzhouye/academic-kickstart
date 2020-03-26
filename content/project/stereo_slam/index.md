@@ -169,7 +169,9 @@ This is the data structure used in my implementation. A map owns multiple keyfra
 
 ### Bundle Adjustment
 
-Bundle adjustment is performed on active keyframes and landmarks. G2O framework is used in the implementation. Pose-only optimization only modifies the camera poses to reduce the reprojection error, while structure optimization modifies both the poses and landmarks positions. Levenberg–Marquardt method is used for optimization. The cost function is:
+Bundle adjustment is performed on active keyframes and landmarks. The figure below illustrates the keyframe-based bundle adjustment ($T_i$ denotes camera poses, and $X_j$ denotes landmarks). Compared to filter-based methods, where previous poses are removed from the map and summarized into a probability distribution at the current time, keyframe-based methods control the computational scale by selecting a subset of all the frames as keyframes [5].
+
+G2O framework is used in the implementation. Pose-only optimization only modifies the camera poses to reduce the reprojection error, while structure optimization modifies both the poses and landmarks positions. Levenberg–Marquardt method is used for optimization. The cost function is:
 
 $\frac{1}{2}\sum_{i=1}^{m}\sum_{j=1}^{n}\left \|| z_{ij} - h(T_{i},P_{j}) \right \||$
 
@@ -177,20 +179,20 @@ The computational cost is reduced by utilizing the sparsity of the H matrix. The
 
 In the final version, ten iterations are performed to reject outliers. Ten iterations of structure optimization are then completed to optimize both landmarks and poses. Another ten iterations of pose only optimization is also performed.
 
-A landmark is considered as an outlier if its cost is larger than a threshold. The threshold will be increased if half of the landmarks are regarded as outliers in the first few iterations. Although only landmarks with reliable depth information are added for optimization, the threshold for 'reliable depth' is mostly an empirical result. It turns out that the performance of optimization is sensitive to the threshold. A smaller threshold shows a significantly better performance. This indicates that triangulated landmarks that are far away from the camera are not accurate. It makes sense as the stereo system can degenerate into a monocular one if the object is far away from the camera. Therefore, to maintain the robustness of the system, optimized landmark positions are updated into the map.
+A landmark is considered as an outlier if its cost is larger than a threshold. The threshold will be increased if half of the landmarks are regarded as outliers in the first few iterations. Although only landmarks with reliable depth information are added for optimization, the threshold for 'reliable depth' is mostly an empirical result. It turns out that the performance of optimization is sensitive to the threshold. A smaller threshold shows a significantly better performance. This indicates that triangulated landmarks that are far away from the camera are not accurate. It makes sense as the stereo system can degenerate into a monocular one if the object is far away from the camera. Therefore, to maintain the robustness of the system, optimized landmark positions are not updated into the map.
 
-Although the tracking thread and the optimization thread can be run in parallel according to state-of-art keyframe-based SLAM systems [5], they are completed in sequence for simplicity in the implementation. 
+Although the tracking thread and the optimization thread can be run in parallel according to state-of-art keyframe-based SLAM systems [6], they are completed in sequence for simplicity in the implementation. 
 
 ## Results
 
-The table below shows the performance of my implementation on KITTI Dataset sequence 00 [6]. The runtime is around 0.18s for a keyframe and 0.04s for a non-keyframe.
+The table below shows the performance of my implementation on KITTI Dataset sequence 00 [7]. The runtime is around 0.18s for a keyframe and 0.04s for a non-keyframe.
 
 | Seq 00 on KITTI      | Translational Error (%) | Rotational Error (deg/m) |
 |----------------------|-------------------------|--------------------------|
 | Without Optimization | 4.40                    | 1.38                     |
 | With Optimization    | 4.17                    | 1.37                     |
 
-The figure below shows the trajectory estimated by my implementation compared to the ground truth. The system has been tested on KITTI sequence 00 and 01 without lost.
+The figure below shows the trajectory estimated by my implementation compared to the ground truth. The system has been tested on KITTI sequence 00 (urban environment) and 01 (highway) without lost.
 
 ![sequence_00](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/sequence_00-1.jpg?raw=true "sequence_00")
 
@@ -209,6 +211,8 @@ The figure below shows the trajectory estimated by my implementation compared to
 
 [4] R. Kümmerle, G. Grisetti, H. Strasdat, K. Konolige and W. Burgard, "G2o: A general framework for graph optimization," 2011 _IEEE International Conference on Robotics and Automation_, Shanghai, 2011, pp. 3607-3613.
 
-[5] Klein, G, and D Murray. “Parallel Tracking and Mapping for Small AR Workspaces.” In _2007 6th IEEE and ACM International Symposium on Mixed and Augmented Reality_, 225–234. IEEE, 2007.
+[5] Strasdat, Hauke, J.M.M. Montiel, and Andrew J. Davison. “Visual SLAM: Why Filter?” _Image and Vision Computing_ 30, no. 2 (February 1, 2012): 65–77.
 
-[6] Geiger, Andreas, Philip Lenz, and Raquel Urtasun. “Are We Ready for Autonomous Driving? The KITTI Vision Benchmark Suite.” In _Conference on Computer Vision and Pattern Recognition (CVPR)_, 2012.
+[6] Klein, G, and D Murray. “Parallel Tracking and Mapping for Small AR Workspaces.” In _2007 6th IEEE and ACM International Symposium on Mixed and Augmented Reality_, 225–234. IEEE, 2007.
+
+[7] Geiger, Andreas, Philip Lenz, and Raquel Urtasun. “Are We Ready for Autonomous Driving? The KITTI Vision Benchmark Suite.” In _Conference on Computer Vision and Pattern Recognition (CVPR)_, 2012.
