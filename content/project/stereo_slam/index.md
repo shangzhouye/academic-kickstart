@@ -30,9 +30,11 @@ url_video: ""
 # slides: example
 ---
 
+_Skills - C++, ROS, OpenCV, G2O, Motion Estimation, Bundle Adjustment_
+
 ## Demo
 
-This project is a stereo visual SLAM system with featured-based visual odometry and keyframe-based optimization. This [video](https://www.youtube.com/watch?v=QccAICorVHE&t=14s) shows the stereo visual SLAM system tested on the KITTI dataset sequence 00.
+In this project, I built a stereo visual SLAM system with featured-based visual odometry and keyframe-based optimization from scratch. This [video](https://www.youtube.com/watch?v=QccAICorVHE&t=14s) shows the stereo visual SLAM system tested on the KITTI dataset sequence 00.
 
 ORB Features Detected:
 

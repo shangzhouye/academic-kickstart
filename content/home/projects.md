@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 1  # Order that this section will appear.
 
 title = "Projects"
-subtitle = "ROS, Python, C/C++, Linux"
+subtitle = "Robotics, C/C++, ROS, Python"
 
 [content]
   # Page type to display. E.g. project.
