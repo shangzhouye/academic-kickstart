@@ -23,7 +23,7 @@ url_video: ""
 
 ## Demo:
 
-![demo](https://github.com/shangzhouye/mobile-manipulation-capstone-public/blob/master/Videos/demo.gif?raw=true)
+![demo](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/mobile_manipulation_capstone/demo.gif?raw=true)
 
 The video is available on this [link](https://youtu.be/_jVVm3mORgU).
 
