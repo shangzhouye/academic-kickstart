@@ -37,7 +37,7 @@ The project includes:
 
 - Feedforward and Feedback controller: A PI controller was designed to follow the desired end-effector trajectory using five arm-joints and four base-wheels. The equation of the control law is shown below. The end-effector twist $V$ calculated is then turned into the commanded wheel and arm joint speeds using the pseudoinverse of the mobile manipulator Jacobian.
 
-![](http://hades.mech.northwestern.edu/images/math/9/a/0/9a032c056fee4a288c16a2c17c00c319.png)
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/mobile_manipulation_capstone/equ.png?raw=true)
 
 This project is the final project of ME449: Robot Manipulation, Northwestern University, Evanston.
 
@@ -49,7 +49,7 @@ The program takes the initial cube position, desired final cube position, the ac
 
 The youBot has nine degrees of freedom in total, where J1 to J5 are the arm joint angles, and W1 to W4 are the four wheel-angles. The figure below shows the the robot at its home configuration and the frames {s}, {b}, {0}, and {e}.
 
-![](http://hades.mech.northwestern.edu/images/3/33/Yb-book.png)
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/mobile_manipulation_capstone/Yb-book.png?raw=true)
 
 The project is divided into four python scripts:
 
