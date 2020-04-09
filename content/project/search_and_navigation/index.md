@@ -79,7 +79,7 @@ $f(n) = g(n) + h(n)$
 
 The visual display of the planned path is shown in the figure below. Blue cells are the occupied cells, and yellow cells are the planned path.
 
-fig1
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/search_and_navigation/figures/fig1.png?raw=true)
 
 ### Online A*
 
@@ -99,11 +99,11 @@ The implementation of the ‘online’ searching version is based on the ‘offl
 
 The physical size of the robot is taken into account by inflating the obstacles. Squares approximate the inflated obstacles. The inflation method is shown in the figure below. Each obstacle was inflated by 0.3m in each direction. The corresponding cells were calculated. After that, all the 49 cells, as shown in the figure below, are labels as occupied.
 
-fig2
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/search_and_navigation/figures/fig2.png?raw=true)
 
 The figure below is the visual display of the results (‘online’ searching) with 0.1 m grid size and inflated obstacles. As pointed out by the red arrow in the figure, the ‘online’ algorithm commands the robot to move left to move directly to the goal. Only when the obstacles are within the immediate neighbors of the robot, it decides to drive down to go around the occupied cells.
 
-fig3
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/search_and_navigation/figures/fig3.png?raw=true)
 
 ### Controller
 
@@ -111,13 +111,13 @@ The controller is achieved by a proportional steering control and proportional s
 
 The proportional gain for the linear and angular velocity was chosen to be 0.5 and 4, respectively. The final results are shown in Figure a below. Figure b shows the results without acceleration restrictions. Figures c and d show the movement of the robot with a smaller proportional gain and a larger proportional gain, respectively. When the gain is too small, the robot travels around with a large offset, which may cause the robot to move to its neighbor cell during the movement. A larger gain causes oscillation during the movement, as shown in Figure d.
 
-figure 4
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/search_and_navigation/figures/fig4.png?raw=true)
 
 ### Waypoints tracking
 
 The figure below shows the robot tracking the waypoints (path) generated. Yellow cells are the planned path, and red arrows show the actual robot trajectory. The robot can move smoothly along the path.
 
-fig5
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/search_and_navigation/figures/fig5.png?raw=true)
 
 To make the waypoint tracking more realistic, the noise was added to the motion model. The figure below illustrates the ‘driving while planning’ results. The algorithm was implemented with several modifications compared to the previous version.
 
@@ -127,11 +127,11 @@ To make the waypoint tracking more realistic, the noise was added to the motion 
 -   The current node, which the robot was unintentionally moved into, was added to the path. The targeted node, which the robot fails to reach, was deleted from the path.
 -   After re-planning, the robot controller moves the robot towards the next node.
 
-fig6
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/search_and_navigation/figures/fig6.png?raw=true)
 
 ‘Driving while planning’ results with a coarse grid are shown in the figure below.
 
-fig 7
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/search_and_navigation/figures/fig7.png?raw=true)
 
 # RRT Algorithm
 
