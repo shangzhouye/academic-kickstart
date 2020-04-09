@@ -25,7 +25,9 @@ url_video: ""
 
 ![demo](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/mobile_manipulation_capstone/demo.gif?raw=true)
 
-The video is available on this [link](https://youtu.be/_jVVm3mORgU).
+For a video of the robot in action, please watch this video.
+
+{{< youtube _jVVm3mORgU >}}
 
 ## Overview:
 

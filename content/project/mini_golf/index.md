@@ -23,15 +23,27 @@ url_slides: ""
 url_video: ""
 ---
 
-*Shangzhou Ye, Joshua Cohen, Yigitcan Comlek and Riley Knox*
+*Skills: ROS, Motion Planning, MoveIt, Inverse Kinematics, Computer Vision, Git Usage*
 
-**Skills: ROS, Motion Planning, MoveIt, Inverse Kinematics, Computer Vision, Git Usage**
+**Contents**
+- [Demo](#demo)
+- [Overview](#overview)
+- [My Contribution](#my-contribution)
+- [Project Description](#project-description)
+  - [Nodes](#nodes)
+  - [Node Descriptions](#node-descriptions)
+    - [Computer Vision](#computer-vision)
+    - [Mapping Frames](#mapping-frames)
+    - [Moving Behind Ball](#moving-behind-ball)
+    - [Hitting Ball](#hitting-ball)
 
 ## Demo
 
 ![Image](https://github.com/shangzhouye/final-project-numg/blob/master/pictures/demo.gif?raw=true)
 
-For a video of the robot in action, [please watch this video](https://www.youtube.com/watch?v=8vYBKLIraps).
+For a video of the robot in action, please watch this video.
+
+{{< youtube 8vYBKLIraps >}}
 
 ## Overview
 
@@ -66,7 +78,7 @@ The program generally follows the structure of the flowchart shown here:
 
 ![flowchart](https://github.com/shangzhouye/final-project-numg/blob/master/pictures/FinalProjectFlowchart.png?raw=true)
 
-### Node Descriptions:
+### Node Descriptions
 
 #### Computer Vision
 

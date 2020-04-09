@@ -32,9 +32,23 @@ url_video: ""
 
 _Skills - C++, ROS, OpenCV, G2O, Motion Estimation, Bundle Adjustment_
 
+**Contents**
+- [Demo](#demo)
+- [Overview](#overview)
+- [Algorithms](#algorithms)
+  - [Initialization](#initialization)
+  - [Feature Detection/Matching](#feature-detectionmatching)
+  - [Motion Estimation](#motion-estimation)
+  - [Map Management](#map-management)
+  - [Bundle Adjustment](#bundle-adjustment)
+- [Results](#results)
+- [Future Work](#future-work)
+- [References](#references)
+
 ## Demo
 
-In this project, I built a stereo visual SLAM system with featured-based visual odometry and keyframe-based optimization from scratch. This [video](https://www.youtube.com/watch?v=QccAICorVHE&t=14s) shows the stereo visual SLAM system tested on the KITTI dataset sequence 00.
+In this project, I built a stereo visual SLAM system with featured-based visual odometry and keyframe-based optimization from scratch. This video below shows the stereo visual SLAM system tested on the KITTI dataset sequence 00.
+{{< youtube QccAICorVHE >}}
 
 ORB Features Detected:
 
