@@ -83,6 +83,8 @@ Six packages are built in this project.
 
 The video below shows the testing of the odometer in the real world.
 
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/ekf_slam/nuturtle_real_world.gif?raw=true)
+
 ### Landmark Detection
 
 Landmarks in the environment are cylinders. Therefore, the feature detection pipeline includes points clustering, circle fitting, and circle classification. The 2D laser scanner results are clustered into groups based on a distance threshold. Clusters with fewer than 4 points are then discarded to enhance the robustness of the circle fitting algorithm.
