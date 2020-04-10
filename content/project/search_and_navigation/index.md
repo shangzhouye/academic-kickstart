@@ -1,6 +1,6 @@
 ---
 title: A* Search, RRT and Navigation
-summary: A* and Rapidly-Exploring Random Tree algorithm
+summary: A* and Rapidly-Exploring Random Tree algorithm.
 skills: Skills - Motion Planner, Differential Drive Robot
 tags:
 date: "2019-10-28T00:00:00Z"

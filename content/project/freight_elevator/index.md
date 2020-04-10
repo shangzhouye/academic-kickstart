@@ -1,6 +1,6 @@
 ---
 title: Mechanical Design of Freight Elevator
-summary: Design of a freight elevator and finite element analysis
+summary: Design of a freight elevator and finite element analysis.
 skills: Skills - SolidWorks, 3D Modeling, 2D Drawing, Material Selection
 tags:
 date: "2017-11-01T00:00:00Z"
