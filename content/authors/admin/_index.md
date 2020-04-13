@@ -7,7 +7,7 @@ authors:
 - admin
 # resume download button
 btn:
-- url : "https://www.mccormick.northwestern.edu/robotics/documents/resumes/2019/ye-shangzhou.pdf"
+- url : "files/resume.pdf"
   label : "Download Resume"
 
 # Is this the primary user of the site?
