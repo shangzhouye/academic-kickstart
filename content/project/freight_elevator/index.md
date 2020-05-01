@@ -1,6 +1,6 @@
 ---
 title: Mechanical Design of Freight Elevator
-summary: Design of a freight elevator and finite element analysis.
+summary: Designed a freight elevator and performed finite element analysis.
 skills: Skills - SolidWorks, 3D Modeling, 2D Drawing, Material Selection
 tags:
 date: "2017-11-01T00:00:00Z"
@@ -28,11 +28,13 @@ url_video: ""
 
 *Skills - SolidWorks, 3D Modeling, Mechanical Design, FEA, Failure Prediction, 2D Drawing, Component Selection, Material Selection*
 
-![Image](https://www.dropbox.com/s/yb6em6acfocg0qd/H16TMbszB_rJ1-dfnMB.png?dl=1)
-
 ## Project Overview:
 
-This project designed a freight elevator (dumbwaiter), including the car, housing, support frames, and transmission connections. Finite element analysis, design analysis, and components selection were also conducted.
+This project designed a freight elevator (dumbwaiter), including the car, housing, support frames, and transmission connections. 
+
+![Image](https://www.dropbox.com/s/yb6em6acfocg0qd/H16TMbszB_rJ1-dfnMB.png?dl=1)
+
+Finite element analysis, design analysis, and components selection were also conducted.
 
 The specifications are as follow:
 - Maximum Car Speed: 0.6 m/s

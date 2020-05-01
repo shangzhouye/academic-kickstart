@@ -1,6 +1,6 @@
 ---
 title: Mini-Golf
-summary: Program a Rethink Sawyer robot to play mini-golf using ROS and MoveIt. 
+summary: Programed a Rethink Sawyer robot to play mini-golf using ROS and MoveIt. 
 skills: Skills - ROS, MoveIt, Python, Motion Planning
 tags:
 date: "2019-12-13T00:00:00Z"
@@ -25,9 +25,24 @@ url_video: ""
 
 *Skills: ROS, Motion Planning, MoveIt, Inverse Kinematics, Computer Vision, Git Usage*
 
+## Overview
+
+The goal of this project was to program a Rethink Sawyer robot to play mini-golf. Given a game space mimicking a putting green, the robot recognizes the ball and the hole, and moves itself into a striking position behind the ball. Then, it actuates its joints to perform a putting motion and hit the ball into the hole. 
+
+![Image](https://github.com/shangzhouye/final-project-numg/blob/master/pictures/demo.gif?raw=true)
+
+This project is our final project of ME495: Embedded Systems in Robotics (ROS), Dec. 2019. The theme is recreational robotics.
+
+## Demo
+
+{{< youtube 8vYBKLIraps >}}
+
+<br><br/>
+<br><br/>
+
 **Contents**
-- [Demo](#demo)
 - [Overview](#overview)
+- [Demo](#demo)
 - [My Contribution](#my-contribution)
 - [Project Description](#project-description)
   - [Nodes](#nodes)
@@ -36,20 +51,6 @@ url_video: ""
     - [Mapping Frames](#mapping-frames)
     - [Moving Behind Ball](#moving-behind-ball)
     - [Hitting Ball](#hitting-ball)
-
-## Demo
-
-![Image](https://github.com/shangzhouye/final-project-numg/blob/master/pictures/demo.gif?raw=true)
-
-For a video of the robot in action, please watch this video.
-
-{{< youtube 8vYBKLIraps >}}
-
-## Overview
-
-The goal of this project was to program a Rethink Sawyer robot to play mini-golf. Given a game space mimicking a putting green, the robot recognizes the ball and the hole, and moves itself into a striking position behind the ball. Then, it actuates its joints to perform a putting motion and hit the ball into the hole. 
-
-This project is our final project of ME495: Embedded Systems in Robotics (ROS), Dec. 2019. The theme is recreational robotics.
 
 ## My Contribution
 

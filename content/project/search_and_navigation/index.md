@@ -1,6 +1,6 @@
 ---
 title: A* Search, RRT and Navigation
-summary: A* and Rapidly-Exploring Random Tree algorithm.
+summary: Implemented A* and Rapidly-Exploring Random Tree algorithm.
 skills: Skills - Motion Planner, Differential Drive Robot
 tags:
 date: "2019-10-28T00:00:00Z"
@@ -29,6 +29,19 @@ url_video: ""
 
 *Skills: A\* algorithm, RRT, Graph-based search, path tracking, PID controller, differential drive robot, navigational & motion planner*
 
+## Demo
+
+This project includes the implementation of an A* search algorithm, and a Rapidly-Exploring Random Tree (RRT).
+
+A* search algorithm:
+
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/search_and_navigation/figures/fig7.png?raw=true)
+
+Rapidly-Exploring Random Tree (RRT):
+
+![](https://github.com/shangzhouye/rrt-practice/blob/master/Figure_1.png?raw=true)
+
+
 **Contents**
 - [A* Search and Navigation](#a-search-and-navigation)
   - [Overview](#overview)
@@ -41,7 +54,7 @@ url_video: ""
     - [Controller](#controller)
     - [Waypoints tracking](#waypoints-tracking)
 - [RRT Algorithm](#rrt-algorithm)
-  - [Demo](#demo)
+  - [Demo](#demo-1)
   - [Overview](#overview-1)
   - [Modules](#modules)
     - [`simplerrt.py`](#simplerrtpy)

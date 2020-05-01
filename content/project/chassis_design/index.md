@@ -1,6 +1,6 @@
 ---
 title: Design of Chassis for a Single-Seater Race Car
-summary: Design a chassis structure and comply with design rules.
+summary: Designed a chassis structure that complies with design rules.
 skills: Skills - FEA, ANSYS, SolidWorks
 tags:
 date: "2018-08-01T00:00:00Z"
@@ -28,11 +28,13 @@ url_video: ""
 
 *Skills: FEA, ANSYS, SolidWorks, Pareto Efficiency*
 
-![](https://www.dropbox.com/s/ijezf7m2bi1kuhv/SkxpMBnzH_SyE3xIhzS.png?dl=1)
-
 ## Project Overview:
 
-This project is to design a tubular steel space frame chassis structure for a single-seater race car and comply with design rules. The design also has to satisfy three load cases (torsional stiffness, bump, and frontal impact) and be as lightweight as possible. The conceptual design was generated in SolidWorks, and ANSYS FEA was used to optimize the designs through an iterative process.
+This project is to design a tubular steel space frame chassis structure for a single-seater race car and comply with design rules. 
+
+![](https://www.dropbox.com/s/ijezf7m2bi1kuhv/SkxpMBnzH_SyE3xIhzS.png?dl=1)
+
+The design also has to satisfy three load cases (torsional stiffness, bump, and frontal impact) and be as lightweight as possible. The conceptual design was generated in SolidWorks, and ANSYS FEA was used to optimize the designs through an iterative process.
 
 ## Design Rules:
 

@@ -1,6 +1,6 @@
 ---
 title: One-legged 2-D Hopping Robot Simulation
-summary: Model a 2D one-legged hopping robot on a flat ground.
+summary: Modeled a 2D one-legged hopping robot on a flat ground.
 skills: Skills - Lagrangian Mechanics, Numerical Method
 tags:
 date: "2019-12-11T00:00:00Z"
@@ -26,11 +26,11 @@ url_video: ""
 
 # Demo
 
+This project models a 2D one-legged hopping robot on a flat ground.
+
 ![demo](https://github.com/shangzhouye/one-legged-2-D-hopping-robot/blob/master/demo.gif?raw=true)
 
 # Overview
-
-This project models a 2D one-legged hopping robot on a flat ground.
 
 The motion includes five phases:
 

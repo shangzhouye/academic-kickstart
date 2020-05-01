@@ -1,6 +1,6 @@
 ---
 title: Mobile Manipulation
-summary: Pick and place a block using the youBot mobile manipulator.
+summary: Programed the youBot mobile manipulator to pick and place a block.
 skills: Skills - Trajectory Generation, Omnidirectional Robot
 tags:
 date: "2019-12-11T00:00:00Z"
@@ -22,6 +22,8 @@ url_video: ""
 *Skills: Trajectory Generation, Forward Kinematics, Jacobian, PI controller, Omnidirectional Robot*
 
 ## Demo:
+
+This project programed the youBot mobile manipulator to pick and place a block.
 
 ![demo](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/mobile_manipulation_capstone/demo.gif?raw=true)
 
