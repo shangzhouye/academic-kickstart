@@ -32,7 +32,7 @@ url_video: ""
 
 This project is to design a tubular steel space frame chassis structure for a single-seater race car and comply with design rules. 
 
-![](https://www.dropbox.com/s/ijezf7m2bi1kuhv/SkxpMBnzH_SyE3xIhzS.png?dl=1)
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/chassis_design/figures/1.png?raw=true)
 
 The design also has to satisfy three load cases (torsional stiffness, bump, and frontal impact) and be as lightweight as possible. The conceptual design was generated in SolidWorks, and ANSYS FEA was used to optimize the designs through an iterative process.
 
@@ -68,7 +68,7 @@ Legend:
 -   Max Stress in Mpa (in Red Dots)
 -   Torsional Stiffness divided by 10 in Nm/deg (in Green Dots)
 
-![](https://www.dropbox.com/s/y5jzdferz0as4bn/SkxpMBnzH_Bk3GeUnMH.png?dl=1)
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/chassis_design/figures/2.png?raw=true)
 
 The teamwork went through a cyclic, iterative process of designing, analyzing, and refining. Initially, we each explored our own ideas to form the initial concepts. We chose one of them as our first concept. After that, each team member focused on a specific area to investigate. Then, the team worked closely to integrate and refine each design iteration. Iteration 13 eventually became our focus as it had the best chances of being light and complying to rules. A full rule check was completed, and further optimization took place to conclude iteration 17 as our final design.
 
@@ -84,21 +84,21 @@ The chassis design includes:
 -   Dash hoop supports
 -   Main roll hoop bracing support
 
-Attached is our final design:
+This is our final design:
 
-![](https://www.dropbox.com/s/k3u0im7gaoyn7um/SkxpMBnzH_SynmMvnGr.png?dl=1)
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/chassis_design/figures/1.png?raw=true)
 
 Torsion load case (ANSYS FEA):
 
-![](https://www.dropbox.com/s/4mjxete55mav29j/SkxpMBnzH_BkAvMw2Gr.png?dl=1)
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/chassis_design/figures/3.png?raw=true)
 
 Bump load case (ANSYS FEA):
 
-![](https://www.dropbox.com/s/zbr5p092r04sacr/SkxpMBnzH_B13aMPnMr.png?dl=1)
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/chassis_design/figures/4.png?raw=true)
 
 Frontal impact load case (ANSYS FEA):
 
-![](https://www.dropbox.com/s/x36lmz8pqsx8p5z/SkxpMBnzH_S1cmmD3zB.png?dl=1)
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/chassis_design/figures/5.png?raw=true)
 
 Some insights we noticed regarding the design:
 -   Rearward main hoop design allows the bracing to comply with the rule while saving weight.

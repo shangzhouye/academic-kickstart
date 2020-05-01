@@ -32,7 +32,7 @@ url_video: ""
 
 This project designed a freight elevator (dumbwaiter), including the car, housing, support frames, and transmission connections. 
 
-![Image](https://www.dropbox.com/s/yb6em6acfocg0qd/H16TMbszB_rJ1-dfnMB.png?dl=1)
+![Image](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/freight_elevator/figures/1.png?raw=true)
 
 Finite element analysis, design analysis, and components selection were also conducted.
 
@@ -60,9 +60,9 @@ The mechanical design parts include:
 
 The initial conceptual design is shown below:
 
-![Image](https://www.dropbox.com/s/xoyb8i5hzeqb6ni/H16TMbszB_B1U1PG3zB.png?dl=1)
+![Image](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/freight_elevator/figures/2.png?raw=true)
 
-![Image](https://www.dropbox.com/s/lsj4o0n1q69hg2s/H16TMbszB_SJoWPG3fr.png?dl=1)
+![Image](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/freight_elevator/figures/3.png?raw=true)
 
 While fulfilling the primary objective of creating a system that can successfully and effectively transport goods between levels, various design aspects are also considered, including cost, weight, ease of manufacturing. 
 
@@ -70,9 +70,9 @@ Alongside the car and internal structure, all mechanical requirements for the du
 
 The final design is shown below:
 
-![Image](https://www.dropbox.com/s/lmt67zlc3kuexo5/H16TMbszB_ByP4dzhMB.png?dl=1)
+![Image](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/freight_elevator/figures/4.png?raw=true)
 
-![Image](https://www.dropbox.com/s/t8iioaw1fbga8bg/H16TMbszB_rJgzdf3MH.png?dl=1)
+![Image](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/freight_elevator/figures/5.png?raw=true)
 
 ## Design Analysis:
 
