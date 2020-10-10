@@ -83,7 +83,7 @@ Six packages are built in this project.
 
 The video below shows the testing of the odometer in the real world.
 
-![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/ekf_slam/nuturtle_real_world.gif?raw=true)
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/ekf_slam/nuturtle_real_world.gif?raw=true)
 
 ### Landmark Detection
 

@@ -32,7 +32,7 @@ url_video: ""
 
 This project designed a freight elevator (dumbwaiter), including the car, housing, support frames, and transmission connections. 
 
-![Image](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/freight_elevator/figures/1.png?raw=true)
+![Image](https://github.com/shangzhouye/portfolio-website/blob/master/content/other-projects/freight_elevator/figures/1.png?raw=true)
 
 Finite element analysis, design analysis, and components selection were also conducted.
 
@@ -60,9 +60,9 @@ The mechanical design parts include:
 
 The initial conceptual design is shown below:
 
-![Image](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/freight_elevator/figures/2.png?raw=true)
+![Image](https://github.com/shangzhouye/portfolio-website/blob/master/content/other-projects/freight_elevator/figures/2.png?raw=true)
 
-![Image](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/freight_elevator/figures/3.png?raw=true)
+![Image](https://github.com/shangzhouye/portfolio-website/blob/master/content/other-projects/freight_elevator/figures/3.png?raw=true)
 
 While fulfilling the primary objective of creating a system that can successfully and effectively transport goods between levels, various design aspects are also considered, including cost, weight, ease of manufacturing. 
 
@@ -70,9 +70,9 @@ Alongside the car and internal structure, all mechanical requirements for the du
 
 The final design is shown below:
 
-![Image](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/freight_elevator/figures/4.png?raw=true)
+![Image](https://github.com/shangzhouye/portfolio-website/blob/master/content/other-projects/freight_elevator/figures/4.png?raw=true)
 
-![Image](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/freight_elevator/figures/5.png?raw=true)
+![Image](https://github.com/shangzhouye/portfolio-website/blob/master/content/other-projects/freight_elevator/figures/5.png?raw=true)
 
 ## Design Analysis:
 

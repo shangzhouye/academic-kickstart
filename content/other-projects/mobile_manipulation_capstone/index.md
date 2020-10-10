@@ -25,7 +25,7 @@ url_video: ""
 
 This project programed the youBot mobile manipulator to pick and place a block.
 
-![demo](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/mobile_manipulation_capstone/demo.gif?raw=true)
+![demo](https://github.com/shangzhouye/portfolio-website/blob/master/content/other-projects/mobile_manipulation_capstone/demo.gif?raw=true)
 
 For a video of the robot in action, please watch this video.
 
@@ -41,7 +41,7 @@ The project includes:
 
 - Feedforward and Feedback controller: A PI controller was designed to follow the desired end-effector trajectory using five arm-joints and four base-wheels. The equation of the control law is shown below. The end-effector twist $V$ calculated is then turned into the commanded wheel and arm joint speeds using the pseudoinverse of the mobile manipulator Jacobian.
 
-![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/mobile_manipulation_capstone/equ.png?raw=true)
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/other-projects/mobile_manipulation_capstone/equ.png?raw=true)
 
 This project is the final project of ME449: Robot Manipulation, Northwestern University, Evanston.
 
@@ -53,7 +53,7 @@ The program takes the initial cube position, desired final cube position, the ac
 
 The youBot has nine degrees of freedom in total, where J1 to J5 are the arm joint angles, and W1 to W4 are the four wheel-angles. The figure below shows the the robot at its home configuration and the frames {s}, {b}, {0}, and {e}.
 
-![](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/mobile_manipulation_capstone/Yb-book.png?raw=true)
+![](https://github.com/shangzhouye/portfolio-website/blob/master/content/other-projects/mobile_manipulation_capstone/Yb-book.png?raw=true)
 
 The project is divided into four python scripts:
 

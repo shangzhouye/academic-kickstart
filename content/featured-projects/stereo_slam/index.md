@@ -39,16 +39,16 @@ In this project, I built a stereo visual SLAM system with featured-based visual 
 
 ORB Features Detected:
 
-![orb_feature](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/orb_feature.gif?raw=true "orb_feature")
+![orb_feature](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/orb_feature.gif?raw=true "orb_feature")
 
 
 Disparity Map:
 
-![disparity](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/disparity.gif?raw=true "disparity")
+![disparity](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/disparity.gif?raw=true "disparity")
 
 Tracking and Optimization:
 
-![mapping](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/mapping.gif?raw=true "mapping")
+![mapping](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/mapping.gif?raw=true "mapping")
 
 - The white point cloud shows the landmarks that are active in the map.
 - Green markers show the keyframes that are undergoing optimization.
@@ -56,11 +56,11 @@ Tracking and Optimization:
 
 Feature Map built:
 
-![feature_map](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/feature_map.gif?raw=true "feature_map")
+![feature_map](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/feature_map.gif?raw=true "feature_map")
 
 Compared to Groundtruth:
 
-![traj](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/traj.gif?raw=true "traj")
+![traj](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/traj.gif?raw=true "traj")
 
 **Contents**
 - [Demo](#demo)
@@ -90,7 +90,7 @@ The system has six major components:
 
 The figure below shows the flowchart of the system. Each component will be presented in detail in the Algorithms section.
 
-![Stereo SLAM](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/Stereo%20SLAM.png?raw=true "Stereo SLAM")
+![Stereo SLAM](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/Stereo%20SLAM.png?raw=true "Stereo SLAM")
 
 This is my winter individual project at the MSR program at Northwestern Univerisity, Evanston (Jan. - Mar. 2020). 
 
@@ -102,11 +102,11 @@ In the initialization stage, depth information of detected ORB keypoints is retr
 
 The disparity map from the SGBM algorithm:
 
-![disparity_map](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/disparity_map.png?raw=true "disparity_map")
+![disparity_map](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/disparity_map.png?raw=true "disparity_map")
 
 3-D Reconstruction of one frame:
 
-![stereo](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/stereo.gif?raw=true "stereo")
+![stereo](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/stereo.gif?raw=true "stereo")
 
 ### Feature Detection/Matching
 
@@ -118,11 +118,11 @@ In the implementation, the suppression radius (the smallest distance to another 
 
 500 key points before the ANMS algorithm:
 
-![ANMSbefore](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/ANMSbefore.png?raw=true "ANMSbefore")
+![ANMSbefore](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/ANMSbefore.png?raw=true "ANMSbefore")
 
 500 key points after ANMS algorithms:
 
-![ANMSafter](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/ANMSafter.png?raw=true "ANMSafter")
+![ANMSafter](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/ANMSafter.png?raw=true "ANMSafter")
 
 The tracking accuracy also increased after implementing this algorithm:
 
@@ -135,11 +135,11 @@ When doing feature matching between adjacent frames, cross-check is performed to
 
 All matches:
 
-![all_matches](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/all_matches.jpg?raw=true "all_matches")
+![all_matches](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/all_matches.jpg?raw=true "all_matches")
 
 After cross-check and threshold selection:
 
-![matches_after_threshold](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/matches_after_threshold.jpg?raw=true "matches_after_threshold")
+![matches_after_threshold](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/matches_after_threshold.jpg?raw=true "matches_after_threshold")
 
 Matched features are then attached to the current frame and connected to matched landmarks (3-D points in world coordinate) in the map. No 3-D points triangulation is performed for non-keyframes.
 
@@ -158,7 +158,7 @@ The result shows the pose-only optimization increases the accuracy while structu
 
 The motion estimation pipeline is a state machine with three states. When ten consecutive frames are rejected, the state will be set to lost. A frame will be rejected if the estimated motion is too large, or the number of inliers is not enough.
 
-![state_machine](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/state_machine.png?raw=true "state_machine")
+![state_machine](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/state_machine.png?raw=true "state_machine")
 
 ### Map Management
 
@@ -177,17 +177,17 @@ The number of active keyframes is kept to be ten in the map to reduce the comput
 
 Green markers show keyframes that are currently active and undergoing optimization:
 
-![active_landmarks](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/active_landmarks.png?raw=true "active_landmarks")
+![active_landmarks](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/active_landmarks.png?raw=true "active_landmarks")
 
 This is the data structure used in my implementation. A map owns multiple keyframes and landmarks. A keyframe owns multiple features. A feature knows the ID of its frame, and the connection between features and landmarks are also established. Keyframes and landmarks are stored in a hashtable (`unordered_map` in `C++`) to ensure O(1) time complexity. Gray arrows in the figure denotes the ownership.
 
-![Data structure](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/Data%20structure.png?raw=true "Data structure")
+![Data structure](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/Data%20structure.png?raw=true "Data structure")
 
 ### Bundle Adjustment
 
 Bundle adjustment is performed on active keyframes and landmarks. The figure below illustrates the keyframe-based bundle adjustment ($T_i$ denotes camera poses, and $X_j$ denotes landmarks). Compared to filter-based methods, where previous poses are removed from the map and summarized into a probability distribution at the current time, keyframe-based methods control the computational scale by selecting a subset of all the frames as keyframes [5].
 
-![keyframe_based](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/keyframe_based.png?raw=true "keyframe_based")
+![keyframe_based](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/keyframe_based.png?raw=true "keyframe_based")
 
 G2O framework is used in the implementation. Pose-only optimization only modifies the camera poses to reduce the reprojection error, while structure optimization modifies both the poses and landmarks positions. Levenberg–Marquardt method is used for optimization. The cost function is:
 
@@ -212,7 +212,7 @@ The table below shows the performance of my implementation on KITTI Dataset sequ
 
 The figure below shows the trajectory estimated by my implementation compared to the ground truth. The system has been tested on KITTI sequence 00 (urban environment) and 01 (highway) without lost.
 
-![sequence_00](https://github.com/shangzhouye/portfolio-website/blob/master/content/project/stereo_slam/figures/sequence_00-1.jpg?raw=true "sequence_00")
+![sequence_00](https://github.com/shangzhouye/portfolio-website/blob/master/content/featured-projects/stereo_slam/figures/sequence_00-1.jpg?raw=true "sequence_00")
 
 ## Future Work
 
