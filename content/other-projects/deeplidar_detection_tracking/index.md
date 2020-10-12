@@ -1,6 +1,6 @@
 ---
 title: 3D-LiDAR Object Detection
-summary: Object detection and tracking system for urban traffic scene with Velodyne-128.
+summary: Developed an object detection and tracking system for urban traffic scene with Velodyne-128.
 skills: Skills - Deep Learning, Object Detection & Tracking
 tags:
 date: "2020-06-01T00:00:00Z"
