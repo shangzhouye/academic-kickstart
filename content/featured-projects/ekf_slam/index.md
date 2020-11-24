@@ -1,7 +1,7 @@
 ---
 title: EKF SLAM on Turtlebot3
 summary: Built EKF SLAM with landmark detection using laser scanner.
-skills: Skills - EKF, Odometry, C++, Unit Testing, CMake
+skills: "**Skills - EKF, Odometry, C++, Unit Testing, CMake**"
 tags:
 date: "2020-03-15T00:00:00Z"
 

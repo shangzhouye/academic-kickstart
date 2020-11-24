@@ -1,7 +1,7 @@
 ---
 title: Mini-Golf
 summary: Programed a Rethink Sawyer robot to play mini-golf using ROS and MoveIt. 
-skills: Skills - ROS, MoveIt, Python, Motion Planning
+skills: "**Skills - ROS, MoveIt, Python, Motion Planning**"
 tags:
 date: "2019-12-13T00:00:00Z"
 
