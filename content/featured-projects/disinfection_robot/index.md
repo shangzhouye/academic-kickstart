@@ -1,9 +1,9 @@
 ---
 title: Autonomous Disinfection Robot
 summary: Built a full-stack disinfection robot with perception, localization, mapping, and navigation capability.
-skills: "**Skills - ROS, Mask R-CNN, Image-LiDAR Fusion, SLAM**"
+skills: "**Skills - ROS, Mask R-CNN, PCL, PyTorch, Image-LiDAR Fusion**"
 tags:
-date: "2000-01-01T00:00:00Z"
+date: "2020-12-10T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -30,7 +30,7 @@ url_video: ""
 # slides: example
 ---
 
-_Skills - ROS, C++, Detectron2, Instance Segmentation, Image-LiDAR Fusion, SLAM_
+_Skills - ROS, C++, Detectron2, LiDAR, PCL, PyTorch, CUDA, Instance Segmentation, Image-LiDAR Fusion, SLAM, Computer Networking_
 
 ## Overview
 

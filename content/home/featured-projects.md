@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 1  # Order that this section will appear.
 
 title = "Featured Projects"
-subtitle = "Robotics, Perception, Localization"
+subtitle = "Robotics, Perception, Computer Vison, SLAM"
 
 [content]
   # Page type to display. E.g. project.
