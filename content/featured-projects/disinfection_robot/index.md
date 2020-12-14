@@ -32,19 +32,19 @@ url_video: ""
 
 _Skills - ROS, C++, Detectron2, Instance Segmentation, Image-LiDAR Fusion, SLAM_
 
-## Demo
+## Overview
+
+As COVID-19 spreads across the world, disinfecting surfaces on a regular basis is important for reducing the spread of the infectious disease. An autonomous robot can operate such no-touch disinfection with less operating cost, and minimize the risk for people. 
+
+This project built a full-stack disinfection robot with perception, localization, mapping, and navigation capability. The robot is able to classify and localize tables/desks/chairs, as well as to detect and track people in an indoor environment. After a table/desk/chair being used by a human, the robot will approach the table/desk/chair to do the disinfection.
+
 
 {{< youtube Hjzabal8oYw >}}
 
 ![](./figures/demo.gif)
 
-## Overview
 
-As COVID-19 spreads across the world, disinfecting surfaces on a regular basis is important for reducing the spread of the infectious disease. An autonomous robot can operate such no-touch disinfection with less operating cost, and minimize the risk for people. 
-
-In this project, I built a full-stack disinfection robot with perception, localization, mapping, and navigation capability. The robot is able to classify and localize tables/desks/chairs, as well as to detect and track people in an indoor environment. After a table/desk/chair being used by a human, the robot will approach the table/desk/chair to do the disinfection.
-
-### Hardware
+## Hardware
 
 - Jackal robot from Clearpath
 - RGB-D camera from Intel Realsense (only the RGB camera is used in the final version)
@@ -52,7 +52,7 @@ In this project, I built a full-stack disinfection robot with perception, locali
 
 ![](figures/hardware.gif)
 
-### Software
+## Software
 
 
 The diagram below shows the high-level overview of the software stack with inputs and outputs for each sub-system.
