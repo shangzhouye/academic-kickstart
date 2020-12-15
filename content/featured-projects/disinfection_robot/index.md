@@ -77,7 +77,7 @@ The diagram below shows which node is running on which computer. My laptop is on
 
 ![](./figures/cloud.jpg)
 
-For hostname resolution details and ROS setup to perform this hybrid computing, please refer to this README. Inference in the cloud (with a GeForce GTX 1080Ti) is able to achieve 6Hz frame rate.
+For hostname resolution details and ROS setup to perform this hybrid computing, please refer to this [README](https://github.com/shangzhouye/disinfection-robot-ros/blob/master/README.md/#setup-documentation). Inference in the cloud (with a GeForce GTX 1080Ti) is able to achieve 6Hz frame rate.
 
 ## Algorithms
 

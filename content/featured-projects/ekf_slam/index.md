@@ -1,6 +1,6 @@
 ---
 title: EKF SLAM on Turtlebot3
-summary: Built Extended Kalman filter SLAM with landmark detection using laser scanner.
+summary: Built Extended Kalman filter SLAM from scratch with landmark detection using laser scanner.
 skills: "**Skills - EKF, Odometry, C++, Unit Testing, CMake**"
 tags:
 date: "2020-03-15T00:00:00Z"
