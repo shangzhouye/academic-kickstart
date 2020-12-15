@@ -55,7 +55,7 @@ My contribution includes implementing the training & validation loop from scratc
 
 ## Network Design
 
-The CenterNet framework \[1] models the object as a single point, which is the center of the bounding box in the image. CenterNet first uses keypoint estimation to find center points. The image is fed into a fully-convolutional encoder-decoder network, and the output is a heatmap for each class with values between \[0,1]. Peaks in the heatmap correspond to object centers. In our project, we use a [DLA-34](https://arxiv.org/abs/) network \[2] as the backbone for our keypoint estimation system. For our training, the input is the KITTI data set image resized to 512 x 512 pixels. We then calculate the center position *p* of the car objects in the resized image space from the label data, and generate the ground truth heatmap by passing the center keypoint through a Gaussian smoothing kernel, where the intensity value of each pixel $I(x,y) = exp(\frac{-(x - p_x)^2 + (y - p_y)^2)}{2\sigma_p^2})$ ($\sigma_p$ is adaptive to the object size). A pixel-wise maximum is taken should two Gaussians overlap. A penalty-reduced pixel-wise logistic regression with focal loss is then used for the training.
+The CenterNet framework \[1] models the object as a single point, which is the center of the bounding box in the image. CenterNet first uses keypoint estimation to find center points. The image is fed into a fully-convolutional encoder-decoder network, and the output is a heatmap for each class with values between \[0,1]. Peaks in the heatmap correspond to object centers. In our project, we use a [DLA-34](https://arxiv.org/pdf/1707.06484.pdf) network \[2] as the backbone for our keypoint estimation system. For our training, the input is the KITTI data set image resized to 512 x 512 pixels. We then calculate the center position *p* of the car objects in the resized image space from the label data, and generate the ground truth heatmap by passing the center keypoint through a Gaussian smoothing kernel, where the intensity value of each pixel $I(x,y) = exp(\frac{-(x - p_x)^2 + (y - p_y)^2)}{2\sigma_p^2})$ ($\sigma_p$ is adaptive to the object size). A pixel-wise maximum is taken should two Gaussians overlap. A penalty-reduced pixel-wise logistic regression with focal loss is then used for the training.
 
 ![](./figures/focal_loss.png)
 
@@ -77,11 +77,11 @@ We use the KITTI \[7] Vision Benchmark Suite. It consists of 7481 training image
 
 For the evaluation, we followed the standard average precision (AP) evaluation criteria proposed in the Pascal VOC benchmark \[8]. A car detection can be counted as true positive only if its overlap with the ground truth bounding box is above 70%. By adjusting the confidence threshold for detection, a precision-recall (PR) curve can be obtained with 40 different recall positions. The AP can then be calculated as the area under the PR curve. We use this calculated average precision value as the measure of the performance of our system. The KITTI benchmark evaluation criterion has three levels of difficulty: Easy, Medium, and Hard  \[7]. The object's minimum bounding box height decreases with increasing difficulty, while the maximum occlusion level and maximum truncation increases with increasing difficulty.
 
-The training loop and inferences steps can be described in Figure 2  ([source](https://medium.com/visionwizard/centernet-objects-as-points-a-comprehensive-guide-2ed9993c48bc)).
+The training loop and inferences steps can be described in Figure 2.
 
 ![](./figures/training_loop.png)
 
-> *Figure 2: Training and Inference flowchart.*
+> *Figure 2: Training and Inference flowchart ([source](https://medium.com/visionwizard/centernet-objects-as-points-a-comprehensive-guide-2ed9993c48bc)).*
 
 
 ## Results
