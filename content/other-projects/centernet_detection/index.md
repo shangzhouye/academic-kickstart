@@ -33,11 +33,11 @@ This project implemented CenterNet \[1] from scratch for 2D object detection and
 
 ![Bounding box detection result of a example image.](./figures/bounding_box.jpeg "Bounding box detection result of an image in the KITTI dataset.")
 
-<p style="text-align: center;"><sub><sup>Bounding box detection result of an image in the KITTI dataset</sup></sub></p>
+> *Bounding box detection result of an image in the KITTI dataset*
 
 ![](./figures/center_heatmap.jpeg)
 
-<p style="text-align: center;"><sub><sup>Predicted heatmap of object center points on an image from the validation set.</sup></sub></p>
+> *Predicted heatmap of object center points on an image from the validation set.*
 
 We aimed to reproduce the results as what is presented in the original [CenterNet](https://arxiv.org/pdf/1904.07850.pdf) paper. The model represents each object as a single point - the center point of the 2D bounding box. DLA-34 \[2] is used as our backbone for center point estimation, and other object properties including width and length of the bounding box are regressed from the center point. We achieved 92.10% Average Precision (AP) for easy objects, 86.72% AP for moderate objects and 78.73% AP for hard objects respectively when detecting cars.
 
@@ -65,7 +65,7 @@ Once the keypoint detection heatmap is generated, other properties, such as the 
 
 ![](./figures/architecture.jpg)
 
-<p style="text-align: center;"><sub><sup>Figure 1: Network architecture with three heads - heatmap head, offset head and width-height head.</sup></sub></p>
+> *Figure 1: Network architecture with three heads - heatmap head, offset head and width-height head.*
 
 
 **Implementation details:** We use the 34-layer deep layer aggregation (DLA) network \[2] as our backbone. The heatmap from the keypoint estimator has the size of 128 x 128 with an output stride of 4. There is an additional local offset prediction to compensate for the decrease in resolution. The weights of heatmap loss, width/height loss and offset loss are 1, 0.1, and 0.1 respectively. We trained with batch-size of 8 (on 1 GPU) and learning rate of 5e-4. The model converges after 3 epochs and start to over-fitting after that.
@@ -81,30 +81,30 @@ The training loop and inferences steps can be described in Figure 2  ([source](h
 
 ![](./figures/training_loop.png)
 
-<p style="text-align: center;"><sub><sup>Figure 2: Training and Inference flowchart.</sup></sub></p>
+> *Figure 2: Training and Inference flowchart.*
 
 
 ## Results
 
 ![](./figures/results.png)
 
-<sub><sup>Table 1: Compare evaluation results of our implementation to the original CenterNet on KITTI.</sup></sub>
+> *Table 1: Compare evaluation results of our implementation to the original CenterNet on KITTI.*
 
 Table 1 shows our evaluation results compared to the original CenterNet paper. Notice that the original paper follows a 50/50 training and validation split and we are having an 80/20 split. Also, the results of the original paper is based on all classes but we only focused on cars predictions in this project.
 
 ![](./figures/compare.jpeg)
 
-<p style="text-align: center;"><sub><sup>Figure 3: An example image in the validation set. (left) Ground truth (right) inference results from our implementation.</sup></sub></p>
+> *Figure 3: An example image in the validation set. (left) Ground truth (right) inference results from our implementation.*
 
 ![](./figures/heatmap_small.jpeg)
 
-<p style="text-align: center;"><sub><sup>Figure 4: (left) Ground truth (right) Predicted heatmap. (bottom) Inference results.</sup></sub></p>
+> *Figure 4: (left) Ground truth (right) Predicted heatmap. (bottom) Inference results.*
 
 Figure 3 shows an example inference result compared to the ground truth. It is shown that our model to able to predict most of the objects correctly in this scene. Figure 4 shows the comparison between the ground truth heatmap with Gaussian smoothing and our predicted heatmap on the same image.
 
 ![](./figures/pr_curve.png)
 
-<p style="text-align: center;"><sub><sup>Figure 5: Precision Recall curve on validation set.</sup></sub></p>
+> *Figure 5: Precision Recall curve on validation set.*
 
 Figure 5 shows the precision-recall curve of our final model on the validation set. Three curves represent easy, moderate, and hard objects respectively. The area under the curve is the average precision (AP).
 
