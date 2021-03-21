@@ -36,7 +36,7 @@ url_video: ""
 
 This repository builds feature-based EKF SLAM on Turtlebot3 from scratch. The demo below shows the algorithm in action (2x speed).
 
-![](https://github.com/shangzhouye/EKF-SLAM-on-Turtlebot3/blob/public/figures/slam_in_control.gif?raw=true)
+![](../../featured-projects/ekf_slam/side_by_side.gif)
 
 - Trajectories
   - The pink path shows the odometer estimated path.
@@ -93,7 +93,7 @@ A circle fitting algorithm [1] was implemented to find the position and radius o
 
 ### EKF SLAM
 
-The implemented EKF SLAM algorithm can be found [here](https://nu-msr.github.io/navigation_site/slam.pdf).
+An extended-Kalman-filter is implemented. Kalman filter has two steps, a prediction step, and a correction step. The prediction step takes the motion commands into account to predict the robot's position in the current time step. The correction step then compares the robot's actual observations with the predicted observations to correct the robot state. The observations, in this case, are all the detected cylindrical landmark positions. Because the model is nonlinear, the extended Kalman filter is used to linearize the dynamics locally by a Taylor expansion.
 
 ## Future Work
 
